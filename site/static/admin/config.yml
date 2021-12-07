@@ -1,14 +1,22 @@
 backend:
   name: git-gateway
+i18n:
+  # Required and can be one of multiple_folders, multiple_files or single_file
+  # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
+  # multiple_files - persists files in `<folder>/<slug>.<locale>.<extension>`
+  # single_file - persists a single file in `<folder>/<slug>.<extension>`
+  structure: multiple_folders
+
+  # Required - a list of locales to show in the editor UI
+  locales: [en, bg]
+
+  # Optional, defaults to the first item in locales.
+  # The locale to be used for fields validation and as a baseline for the entry.
+  default_locale: bg
 
 publish_mode: editorial_workflow
-
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
-
-site_url: https://priceless-khorana-a178c5.netlify.app
-
-display_url: https://priceless-khorana-a178c5.netlify.app
+media_folder: "site/static/img" # Folder where user uploaded files should go
+public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
