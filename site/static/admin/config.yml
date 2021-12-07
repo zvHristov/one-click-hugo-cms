@@ -1,5 +1,7 @@
 backend:
   name: git-gateway
+  branch: master
+  
 i18n:
   # Required and can be one of multiple_folders, multiple_files or single_file
   # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
